@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern App</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1, .button {
+            font-family: 'Press Start 2P', cursive; 
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .button {
+            display: block;
+            width: 80%;
+            max-width: 200px; 
+            padding: 10px;
+            margin: 10px auto;
+            background-color: #fff;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        /* button styling */
+        .button:hover {
+            background-color: #333;
+            color: #fff;
+            transform: scale(1.1);
+        }
+        .button.music { background-color: #9B90C2; } 
+        .button.plans { background-color: #a2e5ee; } 
+        .button.social { background-color: #90c29f; } 
+        .button.health { background-color: #c04665; color: #fff; } 
+
+        /* smart phone screen adjuster */
+        @media screen and (max-width: 600px) {
+            body {
+                transform: scale(1.5); 
+                transform-origin: top left;
+            }
+
+            .button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Modern App</h1>
+        <button class="button" onclick="openEmail()">Email</button>
+        <button class="button" onclick="openMaps()">GPS</button>
+        <button class="button" onclick="openText()">Text</button>
+        <button class="button" onclick="openContacts()">Contacts</button>
+        <button class="button music" onclick="openMusic()">Music</button>
+        <button class="button plans" onclick="openPlans()">Plans</button>        <!-- needs function -->
+        <button class="button social" onclick="openSocial()">Social</button>     <!-- needs function -->
+        <button class="button health" onclick="openHealth()">Health</button>     <!-- needs function -->
+    </div>
+
+    <script>
+        function openEmail() {
+            window.location.href = 'mailto:';
+        }
+
+        function openMaps() {
+            window.location.href = 'maps:';
+        }
+
+        function openText() {
+            window.location.href = 'messages';
+        }
+
+        function openContacts() {
+            window.location.href = 'contacts:';
+        }
+
+        function openMusic() {
+            window.location.href = 'music:';
+        }
+
+        function openPlans() {
+            // Add Calendar syntax here
+        }
+
+        function openSocial() {
+            // Add Social here (working progress) / *awaiting new concept*
+        }
+
+        function openHealth() {
+            // Add Health app shortcut basically. / *awaiting new concept*
+        }
+    </script>
+</body>
+</html>
