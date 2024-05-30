@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern App</title>
+    <title>TUESDAY</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
@@ -42,18 +42,18 @@
             text-decoration: none;
             transition: background-color 0.3s, transform 0.3s;
         }
-        /* button styling */
+
         .button:hover {
             background-color: #333;
             color: #fff;
             transform: scale(1.1);
         }
-        .button.music { background-color: #9582db; } 
-        .button.plans { background-color: #a2e5ee; } 
-        .button.social { background-color: #90c29f; } 
-        .button.health { background-color: #f02759; color: #fff; } 
 
-        /* smart phone screen adjuster */
+        .Booking { background-color: #9582db; } 
+        .Social { background-color: #a2e5ee; } 
+        .Payment { background-color: #90c29f; } 
+        .Merch { background-color: #f02759; color: #fff; } 
+
         @media screen and (max-width: 600px) {
             body {
                 transform: scale(1.5); 
@@ -64,52 +64,45 @@
                 width: 100%;
             }
         }
+
+        .image-container {
+            margin-bottom: 20px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Modern App</h1>
-        <button class="button" onclick="openEmail()">Email</button>
-        <button class="button" onclick="openMaps()">GPS</button>
-        <button class="button" onclick="openText()">Text</button>
-        <button class="button" onclick="openContacts()">Contacts</button>
-        <button class="button music" onclick="openMusic()">Music</button>
-        <button class="button plans" onclick="openPlans()">Plans</button>        <!-- needs function -->
-        <button class="button social" onclick="openSocial()">Social</button>     <!-- needs function -->
-        <button class="button health" onclick="openHealth()">Health</button>     <!-- needs function -->
+        <div class="image-container">
+            <img src="tuesdaylogo.JPG" alt="Logo">
+        </div>
+        <h1>TUESDAY</h1>
+        <button class="button Booking" onclick="openBooking()">Booking</button>
+        <button class="button Social" onclick="openSocial()">Social</button>
+        <button class="button Payment" onclick="openPayment()">Payment</button>
+        <button class="button Merch" onclick="openMerch()">Merch</button>
     </div>
 
     <script>
-        function openEmail() {
-            window.location.href = 'mailto:';
-        }
-
-        function openMaps() {
-            window.location.href = 'maps:';
-        }
-
-        function openText() {
-            window.location.href = 'messages';
-        }
-
-        function openContacts() {
-            window.location.href = 'contacts:';
-        }
-
-        function openMusic() {
+        function openBooking() {
             window.location.href = 'music:';
         }
 
-        function openPlans() {
-            // Add Calendar syntax here
-        }
-
         function openSocial() {
-            // Add Social here (working progress) / *awaiting new concept*
+            window.location.href = 'https://www.instagram.com/tuesdaydub/';
         }
 
-        function openHealth() {
-            // Add Health app shortcut basically. / *awaiting new concept*
+        function openPayment() {
+            window.location.href = 'https://www.paymentsite.com';
+        }
+
+        function openMerch() {
+            window.location.href = 'https://www.merchsite.com';
         }
     </script>
 </body>
