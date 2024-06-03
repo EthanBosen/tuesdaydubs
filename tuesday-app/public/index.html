@@ -69,8 +69,8 @@
             margin-bottom: 20px;
         }
 
-        .image-container img {
-            max-width: 100%;
+        .image-container video {
+            max-width: 50%;
             height: auto;
             border-radius: 10px;
         }
@@ -79,18 +79,20 @@
 <body>
     <div class="container">
         <div class="image-container">
-            <img src="tuesdaylogo.JPG" alt="Logo">
+            <video id="logoVideo" src="tuesdaymotionlogo.mp4" autoplay loop muted playsinline>
+            </video>
         </div>
         <h1>TUESDAY</h1>
-        <button class="button Booking" onclick="openBooking()">Booking</button>
+        <button class="button Booking" onclick="openBooking()">BookEvent</button>
         <button class="button Social" onclick="openSocial()">Social</button>
         <button class="button Payment" onclick="openPayment()">Payment</button>
         <button class="button Merch" onclick="openMerch()">Merch</button>
     </div>
 
+
     <script>
         function openBooking() {
-            window.location.href = 'music:';
+            window.location.href = 'booking.html';
         }
 
         function openSocial() {
@@ -98,11 +100,11 @@
         }
 
         function openPayment() {
-            window.location.href = 'https://www.paymentsite.com';
+            window.location.href = 'payment.html';
         }
 
         function openMerch() {
-            window.location.href = 'https://www.merchsite.com';
+            window.location.href = 'merch.html';
         }
     </script>
 </body>

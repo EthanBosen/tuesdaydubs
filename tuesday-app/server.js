@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Define routes for the buttons
 app.get('/booking', (req, res) => {
-    res.redirect('music:');
+    res.redirect('booking.html');
 });
 
 app.get('/social', (req, res) => {
@@ -26,7 +26,7 @@ app.get('/social', (req, res) => {
 });
 
 app.get('/payment', (req, res) => {
-    res.redirect('https://www.paymentsite.com');
+    res.redirect('payment.html');
 });
 
 app.get('/merch', (req, res) => {
