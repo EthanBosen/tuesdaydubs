@@ -1,8 +1,5 @@
 const express = require('express');
 const path = require('path');
-const morgan = require('morgan');
-const helmet = require('helmet');
-require('dotenv').config();
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -18,7 +15,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Define routes for the buttons
 app.get('/booking', (req, res) => {
-    res.redirect('booking.html');
+    res.redirect('public/booking.html');
 });
 
 app.get('/social', (req, res) => {
@@ -26,11 +23,11 @@ app.get('/social', (req, res) => {
 });
 
 app.get('/payment', (req, res) => {
-    res.redirect('payment.html');
+    res.redirect('public/payment.html');
 });
 
 app.get('/merch', (req, res) => {
-    res.redirect('https://www.merchsite.com');
+    res.redirect('public/merch.html');
 });
 
 // Error handling middleware
