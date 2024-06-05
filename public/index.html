@@ -109,6 +109,13 @@
             z-index: -1;
             transform: translate(-50%, -50%);
         }
+
+        /* iPhone styles */
+        @media only screen and (max-width: 767px) {
+            .video-background video {
+                transform: rotate(90deg) translate(-50%, -50%);
+            }
+        }
     </style>
 </head>
 <body>
