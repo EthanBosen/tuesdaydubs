@@ -17,7 +17,8 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
+            overflow: hidden; /* Prevent scrolling */
         }
 
         .website {
@@ -25,6 +26,8 @@
             font-size: 1.0em;
             text-align: center;
             margin-bottom: 5vw; /* Adjusted margin for responsiveness */
+            padding: 0 10px; /* Add padding for better readability on small screens */
+            word-wrap: break-word; /* Ensure text doesn't overflow */
         }
 
         .image-container {
@@ -32,18 +35,23 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            width: 100%; /* Ensure container takes full width */
         }
 
         .image-container video {
-            max-width: 90%; /* Adjusted max-width for responsiveness */
+            width: 100%;
+            max-width: 400px; /* Limit max-width for larger screens */
             height: auto;
             border-radius: 10px;
-            margin: 0 auto; /* Center the video horizontally */
         }
 
         @media screen and (max-width: 600px) {
-            .email, .image-container {
+            .website, .image-container {
                 margin-bottom: 10vw; /* Increased margin for smaller screens */
+            }
+
+            .website {
+                font-size: 0.9em; /* Adjust font size for smaller screens */
             }
         }
     </style>
