@@ -24,20 +24,27 @@
             font-family: 'Press Start 2P', cursive; 
             font-size: 1.0em;
             text-align: center;
+            margin-bottom: 5vw; /* Adjusted margin for responsiveness */
         }
 
         .image-container {
-            margin-bottom: 70px;
+            margin-bottom: 5vw; /* Adjusted margin for responsiveness */
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
         .image-container video {
-            max-width: 50%;
+            max-width: 90%; /* Adjusted max-width for responsiveness */
             height: auto;
             border-radius: 10px;
             margin: 0 auto; /* Center the video horizontally */
+        }
+
+        @media screen and (max-width: 600px) {
+            .email, .image-container {
+                margin-bottom: 10vw; /* Increased margin for smaller screens */
+            }
         }
     </style>
 </head>
@@ -48,6 +55,5 @@
         </video>
     </div>
     <div class="email">your-email@example.com</div>
-
 </body>
 </html>

@@ -27,17 +27,23 @@
         }
 
         .image-container {
-            margin-bottom: 70px;
+            margin-bottom: 5vw; /* Adjusted margin for responsiveness */
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
         .image-container video {
-            max-width: 50%;
+            max-width: 90%; /* Adjusted max-width for responsiveness */
             height: auto;
             border-radius: 10px;
             margin: 0 auto; /* Center the video horizontally */
+        }
+
+        @media screen and (max-width: 600px) {
+            .image-container {
+                margin-bottom: 10vw; /* Increased margin for smaller screens */
+            }
         }
     </style>
 </head>
@@ -47,7 +53,6 @@
             Your browser does not support the video tag.
         </video>
     </div>
-    <div class="merch">merch coming soon</div>
-
+    <div class="merch">Merch coming soon</div>
 </body>
 </html>

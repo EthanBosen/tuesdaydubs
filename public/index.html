@@ -55,13 +55,23 @@
         .Merch { background-color: #f02759; color: #fff; } 
 
         @media screen and (max-width: 600px) {
-            body {
-                transform: scale(1.5); 
-                transform-origin: top left;
+            .container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
             }
 
             .button {
                 width: 100%;
+                max-width: none;
+                font-size: 0.9rem;
+                padding: 8px;
+            }
+
+            .image-container video {
+                max-width: 100%;
             }
         }
 
@@ -88,7 +98,6 @@
         <button class="button Payment" onclick="openPayment()">Payment</button>
         <button class="button Merch" onclick="openMerch()">Merch</button>
     </div>
-
 
     <script>
         function openBooking() {
