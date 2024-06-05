@@ -18,6 +18,8 @@
         .container {
             padding: 20px;
             text-align: center;
+            position: relative; /* Add this */
+            z-index: 1; /* Add this */
         }
 
         h1, .button {
@@ -84,9 +86,38 @@
             height: auto;
             border-radius: 10px;
         }
+
+        /* New CSS for video background */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .video-background video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+        }
     </style>
 </head>
 <body>
+    <div class="video-background">
+        <video autoplay loop muted playsinline>
+            <source src="backgroundimg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
     <div class="container">
         <div class="image-container">
             <video id="logoVideo" src="tuesdaymotionlogo.mp4" autoplay loop muted playsinline>
