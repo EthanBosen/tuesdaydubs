@@ -96,6 +96,8 @@
             height: 100%;
             z-index: -1;
             overflow: hidden;
+            filter: blur(8px); /* Apply blur */
+            opacity: 0.5; /* Reduce opacity */
         }
 
         .video-background video {
@@ -114,16 +116,16 @@
 <body>
     <div class="video-background">
         <video autoplay loop muted playsinline>
-            <source src="backgroundimg.mp4" type="video/mp4">
+            <source src="tuesdaydubswoodslogo.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
     <div class="container">
         <div class="image-container">
-            <video id="logoVideo" src="tuesdaymotionlogo.mp4" autoplay loop muted playsinline>
+            <video id="logoVideo" src="tuesdaydubswoodslogo.mp4" autoplay loop muted playsinline>
             </video>
         </div>
-        <h1>TUESDAY</h1>
+        <h1>TUESDAY DUBS</h1>
         <button class="button Booking" onclick="openBooking()">Book Event</button>
         <button class="button Social" onclick="openSocial()">Social</button>
         <button class="button Payment" onclick="openPayment()">Payment</button>
