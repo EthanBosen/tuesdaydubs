@@ -55,6 +55,7 @@
         .Social { background-color: #a2e5ee; } 
         .Payment { background-color: #90c29f; } 
         .Merch { background-color: #f02759; color: #fff; } 
+        .Music { background-color: #ff7f50; } /* Added new style for Music button */
 
         @media screen and (max-width: 600px) {
             .container {
@@ -130,6 +131,7 @@
         <button class="button Social" onclick="openSocial()">Social</button>
         <button class="button Payment" onclick="openPayment()">Payment</button>
         <button class="button Merch" onclick="openMerch()">Merch</button>
+        <button class="button Music" onclick="openMusic()">Music</button> <!-- Added new Music button -->
     </div>
 
     <script>
@@ -147,6 +149,10 @@
 
         function openMerch() {
             window.location.href = 'merch.html';
+        }
+
+        function openMusic() {
+            window.location.href = 'https://on.soundcloud.com/vKJ8sJGqsGvqEa7w6';
         }
     </script>
 </body>
